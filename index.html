@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calidad del Aire en Tiempo Real</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Raleway:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header id="navbar">
+        <div class="logo">Nombre pagina</div>
+        <nav>
+            <a href="#mapa">Ver Mapa</a>
+            <a href="#recomendaciones">Mis Recomendaciones</a>
+            <a href="#cuenta">Cuenta</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section dynamic-bg">
+            <div class="particle-animation-container" id="particle-container"></div>
+            
+            <div class="hero-content">
+                <div class="hero-title-wrapper">
+                    <h1 class="hero-title-line-1">
+                        <span class="word-1">R</span><span class="word-2">e</span>s<span class="word-3">p</span>i<span class="word-4">r</span>a
+                    </h1>
+                    <h1 class="hero-title-line-2">
+                        C<span class="word-5">o</span>n C<span class="word-6">o</span>nf<span class="word-7">i</span>a<span class="word-8">n</span>za
+                    </h1>
+                </div>
+                
+                <p class="fade-up delay-2">Con **AERIS**, accede a pronósticos precisos integrando datos satelitales y terrestres para una salud pública óptima.</p>
+                <button class="cta-button fade-up delay-3">Explorar Ahora <i class="fas fa-arrow-right"></i></button>
+            </div>
+
+            <div class="scroll-down-indicator">
+                <div class="arrow-down"></div>
+                <div class="arrow-down"></div>
+            </div>
+        </section>
+
+        <section class="intro-section scroll-reveal">
+            <div class="container">
+                <h2 class="title-section text-center char-split">Conócenos</h2>
+                <div class="intro-grid">
+                    <div class="intro-card fade-in-left">
+                        <h3>Visión Integral</h3>
+                        <p class="line-split">Unimos la potencia de los datos satelitales **TEMPO** con mediciones locales y pronósticos meteorológicos para una imagen completa del aire que te rodea.</p>
+                    </div>
+                    <div class="intro-card fade-in-right">
+                        <h3>Impacto en tu Salud</h3>
+                        <p class="line-split">Recibe recomendaciones personalizadas y alertas sobre la calidad del aire, permitiéndote tomar decisiones informadas para proteger tu bienestar y el de tu familia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="current-air-quality-section scroll-reveal dynamic-bg-alt">
+            <div class="container">
+                <h2 class="title-section text-center char-split">Calidad del Aire Actual</h2>
+                <div class="aqi-dashboard-grid">
+                    <div class="dashboard-card aqi-gauge-card fade-in-up">
+                        <div class="aqi-gauge-wrapper">
+                            <div class="aqi-gauge" id="aqi-gauge">
+                                <div class="gauge-arc-fill" id="gauge-arc-fill"></div>
+                                <div class="gauge-needle" id="gauge-needle"></div>
+                                <div class="gauge-center">
+                                    <span class="aqi-value" id="current-aqi-value">55</span>
+                                    <span class="aqi-label">AQI</span>
+                                </div>
+                            </div>
+                            <p class="air-quality-status" id="aqi-status-text">Calidad Moderada</p>
+                            <button class="action-button-transparent">Más Detalles AQI <i class="fas fa-info-circle"></i></button>
+                        </div>
+                    </div>
+                    
+                    <aside class="dashboard-card recommendations-panel fade-in-up delay-1" id="recomendaciones">
+                        <h3 class="panel-title">Mis Recomendaciones Diarias</h3>
+                        <ul class="recommendation-list">
+                            <li class="fade-in-item"><i class="fas fa-mask"></i> Uso de mascarilla recomendado para grupos sensibles al aire libre.</li>
+                            <li class="fade-in-item delay-1"><i class="fas fa-running"></i> Limita el ejercicio extenuante al aire libre esta tarde, opta por interiores.</li>
+                            <li class="fade-in-item delay-2"><i class="fas fa-window-close"></i> Mantén las ventanas y puertas cerradas para evitar la entrada de contaminantes.</li>
+                            <li class="fade-in-item delay-3"><i class="fas fa-tint"></i> Considera usar un purificador de aire si tienes problemas respiratorios.</li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="predictions-section scroll-reveal">
+            <div class="container">
+                <h2 class="title-section text-center char-split">Pronóstico del Aire por día</h2>
+                <div class="predictions-grid-container fade-in-up">
+                    <div class="day-cards-wrapper">
+                        <div class="day-card-interactive" data-day="lunes" data-aqi="68" data-status="Moderada">
+                            <p class="day-label">Lun</p>
+                            <div class="aqi-icon good">😊</div>
+                        </div>
+                        <div class="day-card-interactive selected" data-day="martes" data-aqi="45" data-status="Buena">
+                            <p class="day-label">Mar</p>
+                            <div class="aqi-icon great">😃</div>
+                        </div>
+                        <div class="day-card-interactive" data-day="miercoles" data-aqi="112" data-status="Mala">
+                            <p class="day-label">Mié</p>
+                            <div class="aqi-icon poor">🙁</div>
+                        </div>
+                        <div class="day-card-interactive" data-day="jueves" data-aqi="80" data-status="Moderada">
+                            <p class="day-label">Jue</p>
+                            <div class="aqi-icon good">😐</div>
+                        </div>
+                        <div class="day-card-interactive" data-day="viernes" data-aqi="30" data-status="Excelente">
+                            <p class="day-label">Vie</p>
+                            <div class="aqi-icon great">🤩</div>
+                        </div>
+                        <div class="day-card-interactive" data-day="sabado" data-aqi="52" data-status="Buena">
+                            <p class="day-label">Sáb</p>
+                            <div class="aqi-icon good">😊</div>
+                        </div>
+                        <div class="day-card-interactive" data-day="domingo" data-aqi="75" data-status="Moderada">
+                            <p class="day-label">Dom</p>
+                            <div class="aqi-icon good">😐</div>
+                        </div>
+                    </div>
+                    
+                    <div class="prediction-details-panel fade-in-right delay-2">
+                        <h3 class="panel-title" id="prediction-day-title">Predicción para el Martes</h3>
+                        <p class="prediction-display-text" id="prediction-base-desc">
+                            Se espera que la calidad del aire se mantenga en niveles **Buenos** durante la mayor parte del día. La dispersión de contaminantes es óptima gracias a vientos ligeros. Las condiciones son ideales para actividades al aire libre.
+                        </p>
+                        <button class="action-button-solid" id="open-modal">Análisis Completo <i class="fas fa-chart-line"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section scroll-reveal dynamic-bg">
+            <div class="container">
+                <h2 class="title-section text-center char-split white-text">Nuestra Cobertura Global</h2>
+                <p class="map-intro line-split white-text fade-in-up delay-1">Explora nuestro mapa interactivo de alta resolución. Combina datos satelitales **TEMPO** con estaciones terrestres para una visión sin precedentes.</p>
+                <div class="map-placeholder parallax-effect fade-in-up delay-2">
+                    <span class="map-text">Cargando Mapa Interactivo...</span>
+                    <div class="map-overlay"></div>
+                </div>
+                <button class="cta-button fade-in-up delay-3">Acceder al Mapa <i class="fas fa-map-marked-alt"></i></button>
+            </div>
+        </section>
+    </main>
+
+    <div id="prediction-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="modal-day-title">Detalles de la Predicción</h3>
+            <div class="modal-aqi-face" id="modal-face">😃</div>
+            <p id="modal-description">
+                **AQI: 45 (Buena)**<br>
+                **Recomendaciones Específicas:** No hay restricciones. Disfruta del día al aire libre.
+                <br><br>
+                **Impacto en la Salud:** La calidad del aire es satisfactoria y representa poco o ningún riesgo.
+            </p>
+            <div class="possible-faces">
+                <p>Posibles escenarios alternativos:</p>
+                <span class="aqi-icon good">😊</span>
+                <span class="aqi-icon poor">🙁</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

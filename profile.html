@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AERIS | Mi Cuenta y Recomendaciones</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Raleway:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header id="navbar">
+        <div class="logo">Nombre pagina</div>
+        <nav>
+            <a href="index.html#mapa">Ver Mapa</a>
+            <a href="index.html#recomendaciones" class="active">Mis Recomendaciones</a>
+            <a href="#" >Cuenta</a> 
+        </nav>
+    </header>
+
+    <main>
+        <section class="profile-section scroll-reveal">
+            <div class="container">
+                <h2 class="title-section text-center char-split">Mi Espacio Personal</h2>
+                
+                <div class="profile-layout-grid">
+                    
+                    <div class="dashboard-card profile-card fade-in-left">
+                        <h3 class="panel-title">Información de Perfil</h3>
+                        
+                        <div class="profile-avatar-area">
+                            <img src="https://via.placeholder.com/100x100/1A73E8/FFFFFF?text=JP" alt="Avatar" class="profile-avatar">
+                            <button class="action-button-transparent small-button">Cambiar Foto</button>
+                        </div>
+                        
+                        <form class="profile-form">
+                            <div class="form-group">
+                                <label for="name">Nombre de Usuario</label>
+                                <input type="text" id="name" value="JuanPerez" readonly>
+                                <i class="fas fa-pen edit-icon" data-field="name"></i>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo Electrónico</label>
+                                <input type="email" id="email" value="juan.perez@aeris.com" readonly>
+                                <i class="fas fa-pen edit-icon" data-field="email"></i>
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Ubicación Preferida</label>
+                                <input type="text" id="location" value="Ciudad de México" readonly>
+                                <i class="fas fa-pen edit-icon" data-field="location"></i>
+                            </div>
+                            
+                            <button type="submit" class="action-button-solid save-button hidden">Guardar Cambios</button>
+                        </form>
+                        
+                        <div class="profile-settings-summary">
+                            <h3 class="panel-title">Configuración de Salud</h3>
+                            <p><i class="fas fa-lungs"></i> **Grupo Sensible:** <span id="sensitive-status">Sí (Asma)</span></p>
+                            <p><i class="fas fa-bell"></i> **Notificaciones:** <span id="notifications-status">Activas (Solo Calidad Mala)</span></p>
+                            <button class="action-button-transparent small-button" style="margin-top: 15px;">Ajustar Preferencias</button>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card chatbot-card fade-in-right">
+                        <h3 class="panel-title chatbot-header">AERIS **Asistente** <i class="fas fa-robot"></i></h3>
+                        
+                        <div class="chat-window" id="chat-window">
+                            <div class="message bot-message">
+                                <p>Hola JuanPerez, soy AERIS. Puedo ayudarte con dudas sobre calidad del aire, pronósticos o darte consejos de salud. ¿Cómo puedo asistirte hoy?</p>
+                            </div>
+                            </div>
+                        
+                        <div class="chat-input-area">
+                            <input type="text" id="chat-input" placeholder="Escribe tu pregunta..." maxlength="150">
+                            <button id="send-btn" class="action-button-solid small-button">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
