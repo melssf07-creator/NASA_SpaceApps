@@ -1,6 +1,6 @@
 /* Variables de Color */
 :root {
-    --color-primary: #e8661a; /* Azul más vibrante */
+    --color-primary: #86d327; /* Azul más vibrante */
     --color-secondary-bg: #F8F9FA; /* Gris claro muy suave para fondos alternos */
     --color-accent-nude: #EFECE6; /* Nude/Café claro */
     --color-text-dark: #202124;
@@ -1338,3 +1338,16 @@ a:hover ~ .cursor-follower,
     }
 }
 /* ... (Resto de estilos se mantienen) ... *
+
+/* MAPA */
+
+#map {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
